@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sale_advanced_products_form_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.fields.form</field>
+            <field name="model">sale.advanced.products</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Order">
+                    <sheet>
+                        <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+                            <button name="adv_order_calc" 
+                                type="object"
+                                class="oe_inline oe_stat_button"
+                                string="Calculate"
+                                icon="fa-euro"
+                                confirm="Are you sure you want to do this?"
+                                help="Calculate total price from pricelist">
+                             </button>
+                        </div>
+                        <group>
+                        <div class="oe_left" style="width: 500px;">
+                            <div class="oe_title" style="width: 390px;">
+                                <h1><field name="name" class="oe_inline"/></h1>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="link"/>
+                            <field name="link"/>
+                        </div>
+                        </group>
+                        <div>
+                            <label for="description"/>
+                            <field name="description"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="create_date"/>
+                                <field name="calc_date"/>
+                            </group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="partner_id" context="{'form_view_ref': 'sale_advanced_products.res_partner_simple_form_view'}"/>
+                            </group>
+                            <separator string="Calculating"/>
+                            <group colspan="4">
+                                <group>
+                                    <field name="body_price"/>
+                                    <field name="find_price"/>
+                                    <field name="add_price"/>
+                                    <field name="acc_price"/>
+                                    <field name="work_price"/>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="complicity"/>
+                                    </group>
+                                    <separator/>
+                                    <group>
+                                        <field name="total_price"/>
+                                    </group>
+                                </group>
+                            </group>
+                        </group>
+                        <separator/>
+                        <notebook>
+                            <page string="Corps">
+                                <group colspan="4">
+                                    <group>
+                                        <field name="body_l"/>
+                                        <field name="body_w"/>
+                                        <field name="body_h"/>
+                                    </group>
+                                    <group>
+                                        <field name="body_door"/>
+                                        <field name="body_rack"/>
+                                    </group>
+                                    <group>
+                                        <field name="body_side" options="{'no_create': True}"/>
+                                        <field name="body_front" options="{'no_create': True}"/>
+                                        <field name="body_bott" options="{'no_create': True}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Furniture">
+                                <group colspan="4">
+                                    <group string="Handle type 1">
+                                        <field name="find_hand1_type" string="Type"/>
+                                        <field name="find_hand1_qty" string="Qty"/>
+                                    </group>
+                                    <group string="Handle type 2">
+                                        <field name="find_hand2_type" string="Type"/>
+                                        <field name="find_hand2_qty" string="Qty"/>
+                                    </group>
+                                </group>
+                                <group colspan="4">
+                                    <group string="Hinge type 1">
+                                        <field name="find_loop1_type" string="Type"/>
+                                        <field name="find_loop1_qty" string="Qty"/>
+                                    </group>
+                                    <group string="Hinge type 2">
+                                        <field name="find_loop2_type" string="Type"/>
+                                        <field name="find_loop2_qty" string="Qty"/>
+                                    </group>
+                                </group>
+                                <group colspan="4">
+                                    <group string="Fixing">
+                                        <field name="find_fix_type" string="Type"/>
+                                        <field name="find_fix_qty" string="Qty"/>
+                                    </group>
+                                    <group string="Anti-Handle">
+                                        <field name="find_anhand_qty" string="Qty"/>
+                                    </group>
+                                </group>
+                                <group string="Drawers">
+                                    <div>
+                                        <field name="furn_box"/>
+                                    </div>
+                                </group>
+                                <group string="Aluminium doors">
+                                    <div>
+                                        <field name="furn_aldoors"/>
+                                    </div>
+                                </group>
+                            </page>
+                            <page string="Additional materials">
+                                <field name="furn_add"/>
+                            </page>
+                            <page string="Accessories">
+                                <group colspan="4">
+                                    <group string="Backlighting">
+                                        <field name="acc_light_type" string="Type"/>
+                                        <field name="acc_light_l" string="Length"/>
+                                    </group>
+                                    <group string="Switch">
+                                        <field name="acc_switch" string="Sensor switch"/>
+                                    </group>
+                                </group>
+                                <group colspan="4">
+                                    <group string="Bucket">
+                                        <field name="acc_bin_type" string="Type"/>
+                                        <field name="acc_bin_qty" string="Qty"/>
+                                    </group>
+                                    <group string="Towel holder">
+                                        <field name="acc_towel_type" string="Type"/>
+                                        <field name="acc_towel_qty" string="Qty"/>
+                                    </group>
+                                </group>
+                                <group string="Necklines">
+                                    <field name="acc_cut" string="Neckline"/>
+                                    <field name="acc_hand_cut_qty" string="Neckline type handle qty"/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <separator string="Attachments"/>
+                        <field name="attachments" widget="many2many_binary"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="sale_advanced_products_tree_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.fields.tree</field>
+            <field name="model">sale.advanced.products</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Advanced Products Orders">
+                    <field name="name"/>
+                    <field name="create_date"/>
+                    <field name="calc_date"/>
+                    <field name="sale_order_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_box_form_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.box.fields.form</field>
+            <field name="model">sale.advanced.products.box</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Drawers">
+                    <group>
+                        <field name="box_l"/>
+                        <field name="box_w"/>
+                        <field name="box_qty"/>
+                        <field name="way"/>
+                        <field name="way_qty"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_box_tree_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.box.fields.tree</field>
+            <field name="model">sale.advanced.products.box</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Drawers">
+                    <field name="box_l"/>
+                    <field name="box_w"/>
+                    <field name="way" string="Slides type"/>
+                    <field name="box_qty"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_aldoors_form_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.aldoors.fields.form</field>
+            <field name="model">sale.advanced.products.aldoors</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Al doors">
+                    <group>
+                        <field name="aldoor_l"/>
+                        <field name="aldoor_w"/>
+                        <field name="aldoor_qty"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_aldoors_tree_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.aldoors.fields.form</field>
+            <field name="model">sale.advanced.products.aldoors</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Al doors">
+                        <field name="aldoor_l"/>
+                        <field name="aldoor_w"/>
+                        <field name="aldoor_qty"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_add_form_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.add.fields.form</field>
+            <field name="model">sale.advanced.products.add</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Additional materials">
+                    <group>
+                        <field name="type"/>
+                        <field name="length"/>
+                        <field name="width"/>
+                        <field name="qty"/>
+                        <field name="templ"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+        <record id="sale_advanced_products_add_tree_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.add.fields.tree</field>
+            <field name="model">sale.advanced.products.add</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Additional materials">
+                    <field name="type"/>
+                    <field name="length"/>
+                    <field name="width"/>
+                    <field name="qty"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <!-- Add settings view -->
+        <record id="sale_advanced_products_settings_view" model="ir.ui.view">
+            <field name="name">sale.advanced.products.settings.view</field>
+            <field name="model">sale.advanced.products.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure Advanced Sales" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                        <group string="Corps">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_minifix"/>
+                                    <field name="furn_shkanta"/>
+                                </group>
+                            </div>
+                        </group>
+                        <group string="Furniture">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_box_mat"/>
+                                    <field name="furn_anhand"/>
+                                    <field name="furn_anhand_fix"/>
+                                </group>
+                                <group>
+                                    <field name="furn_door_angle"/>
+                                    <field name="furn_door_prof"/>
+                                    <field name="furn_door_glass"/>
+                                </group>
+                            </div>
+                        </group>
+                        <group string="Accessories">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_switch"/>
+                                    <field name="furn_cut"/>
+                                    <field name="furn_hand_cut"/>
+                                </group>
+                            </div>
+                        </group>
+                        <group string="Works">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_boxing"/>
+                                    <field name="furn_drilling"/>
+                                </group>
+                            </div>
+                        </group>
+                        <group string="Installation">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_acc_light_w"/>
+                                    <field name="furn_acc_switch_w"/>
+                                    <field name="furn_acc_bin_w"/>
+                                    <field name="furn_acc_towel_w"/>
+                                </group>
+                            </div>
+                        </group>
+                        <group string="Coefficients">
+                            <div class="oe_left">
+                                <group>
+                                    <field name="furn_coef1"/>
+                                    <field name="furn_coef2"/>
+                                    <field name="furn_coef3"/>
+                                    <field name="furn_coef4"/>
+                                    <field name="furn_coef5"/>
+                                </group>
+                            </div>
+                        </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Add fields to product view -->
+        <record id="advanced_product_template_form_view" model="ir.ui.view">
+            <field name="name">advanced.product.template.common.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <div class="oe_left" name="options" groups="base.group_user" position="after">
+                        <group string="Advanced category">
+                            <!--<field name="adv_categ"/>-->
+                                <group colspan="8">
+                                        <div class="oe_left">
+                                            <field name="furn_body"/>
+                                            <label for="furn_body"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_hand"/>
+                                            <label for="furn_hand"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_loop"/>
+                                            <label for="furn_loop"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_fix"/>
+                                            <label for="furn_fix"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_way"/>
+                                            <label for="furn_way"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_add"/>
+                                            <label for="furn_add"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_light"/>
+                                            <label for="furn_light"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_bin"/>
+                                            <label for="furn_bin"/>
+                                        </div>
+                                        <div class="oe_left">
+                                            <field name="furn_towel"/>
+                                            <label for="furn_towel"/>
+                                        </div>
+                                </group>
+                        </group>
+                    </div>
+                </data>
+            </field>
+        </record>
+        
+        <!-- Add partner view -->
+        <record id="res_partner_simple_form_view" model="ir.ui.view">
+            <field name="name">res.partner.simple.view</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                    <form string="Partner">
+                        <group>
+                        <div class="oe_title" style="width: 390px;">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        </group>
+                        <group>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        </group>
+                    </form>
+            </field>
+        </record>
+        
+        <!-- Actions -->
+        <record id="sale_advanced_products_action" model="ir.actions.act_window">
+            <field name="name">Sale Advanced Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.advanced.products</field>
+            <field name="view_type">form</field>
+            <!--<field name="context">{'search_default_draft_orders_filter': 1}</field>-->
+            <field name="view_mode">tree,form</field>
+            <!--<field name="search_view_id" ref="view_sale_advanced_products_filter"/>-->
+        </record>
+        
+        <record id="sale_advanced_products_settings_action" model="ir.actions.act_window">
+            <field name="name">Configure Advanced Sales</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.advanced.products.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+        
+        <!-- Menus -->
+        <menuitem name="Advanced Products" id="base.menu_advanced_products"
+                groups="base.group_advanced_sale_admin,base.group_advanced_sale_manager"/>
+                
+        <menuitem name="Sale" id="base.menu_advanced_products_sale"
+                parent="base.menu_advanced_products"
+                groups="base.group_advanced_sale_admin,base.group_advanced_sale_manager"
+                sequence="0"/>
+        
+        <menuitem name="Settings" id="base.menu_advanced_products_sale_settings"
+                parent="base.menu_advanced_products"
+                groups="base.group_advanced_sale_admin"
+                sequence="1"/>
+        
+        <menuitem name="Sale Advanced Products" id="menu_sale_advanced_products"
+                action="sale_advanced_products_action"
+                parent="base.menu_advanced_products_sale"
+                sequence="0"/>
+        
+        <menuitem name="Configure Advanced Sales" id="menu_sale_advanced_products_settings"
+                action="sale_advanced_products_settings_action"
+                parent="base.menu_advanced_products_sale_settings"
+                sequence="0"/>
+        
+        <menuitem id="product.menu_products" name="Products"
+        parent="base.menu_advanced_products_sale_settings" sequence="1"/>
+        
+    </data>
+</openerp>

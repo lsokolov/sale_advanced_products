@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="base.group_advanced_sale_manager" model="res.groups">
+            <field name="name">Advanced Sale Manager</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+    </data>
+    <data noupdate="0">
+        <record id="base.group_advanced_sale_admin" model="res.groups">
+            <field name="name">Advanced Sale Administrator</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+    </data>
+</openerp>

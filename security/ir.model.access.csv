@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_advanced_products_man,sale.advanced.products,model_sale_advanced_products,base.group_advanced_sale_manager,1,1,1,1
+access_sale_advanced_products_adm,sale.advanced.products,model_sale_advanced_products,base.group_advanced_sale_admin,1,1,1,1
+access_sale_advanced_products_box_man,sale.advanced.products.box,model_sale_advanced_products_box,base.group_advanced_sale_manager,1,1,1,1
+access_sale_advanced_products_box_adm,sale.advanced.products.box,model_sale_advanced_products_box,base.group_advanced_sale_admin,1,1,1,1
+access_sale_advanced_products_add_man,sale.advanced.products.add,model_sale_advanced_products_add,base.group_advanced_sale_manager,1,1,1,1
+access_sale_advanced_products_add_adm,sale.advanced.products.add,model_sale_advanced_products_add,base.group_advanced_sale_admin,1,1,1,1
+access_sale_advanced_products_settings_man,sale.advanced.products.settings,model_sale_advanced_products_settings,base.group_advanced_sale_manager,0,0,0,0
+access_sale_advanced_products_settings_adm,sale.advanced.products.settings,model_sale_advanced_products_settings,base.group_advanced_sale_admin,1,1,1,1

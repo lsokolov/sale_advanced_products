@@ -1,0 +1,641 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_advanced_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-9d0bd28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-28 13:37+0000\n"
+"PO-Revision-Date: 2016-01-28 13:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Accessories"
+msgstr "Аксессуары"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_coef4:0
+msgid "Accessories coefficient"
+msgstr "Аксессуары"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_price:0
+msgid "Accessories price"
+msgstr "Цена аксессуаров"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_add:0
+msgid "Add. mat."
+msgstr "Доп. мат."
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,furn_add:0
+#: view:sale.advanced.products.add:sale_advanced_products.sale_advanced_products_add_form_view
+#: view:sale.advanced.products.add:sale_advanced_products.sale_advanced_products_add_tree_view
+msgid "Additional materials"
+msgstr "Дополнительные материалы"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_coef3:0
+msgid "Adds coefficient"
+msgstr "Доп. мат."
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,add_price:0
+msgid "Adds price"
+msgstr "Цена доп. мат."
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.add,adv_prod_order_id:0
+#: field:sale.advanced.products.box,adv_prod_order_id:0
+msgid "Advanced Product Order"
+msgstr "Заказ"
+
+#. module: sale_advanced_products
+#: view:product.template:sale_advanced_products.advanced_product_template_form_view
+msgid "Advanced category"
+msgstr "Категория"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Anti-Handle"
+msgstr "Антиручка"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_anhand:0
+msgid "Anti-handle"
+msgstr "Антиручка"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_anhand_qty:0
+msgid "Anti-handle Qty"
+msgstr "Кол-во антиручек"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_anhand_fix:0
+msgid "Anti-handle fastener"
+msgstr "Крепление антиручек"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Apply"
+msgstr "Применить"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Are you sure you want to do this?"
+msgstr "Внимание!!! Данные предыдущего расчета будут утеряны!!!"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,attachments:0
+msgid "Attachments"
+msgstr "Вложения"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_light:0
+msgid "Backlight"
+msgstr "Подсветка"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Backlighting"
+msgstr "Подсветка"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_bott:0
+msgid "Bottom"
+msgstr "Дно"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_boxing:0
+msgid "Boxing"
+msgstr "Упаковка"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_bin:0
+msgid "Bucket"
+msgstr "Корзина"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_bin1_qty:0
+msgid "Bucket 1 Qty"
+msgstr "Корзина 1 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_bin1_type:0
+msgid "Bucket 1 Type"
+msgstr "Козина 1 Тип"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_bin2_qty:0
+msgid "Bucket 2 Qty"
+msgstr "Корзина 2 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_bin2_type:0
+msgid "Bucket 2 Type"
+msgstr "Козина 1 Тип"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Bucket type 1"
+msgstr "Корзина 1"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Bucket type 2"
+msgstr "Козина 2"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Calculate"
+msgstr "Расчитать"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Calculate total price from pricelist"
+msgstr "Расчитать общую стоимость из прайслиста"
+
+#. module: sale_advanced_products
+#: selection:sale.advanced.products,state:0
+msgid "Calculated"
+msgstr "Расчитано"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Calculating"
+msgstr "Расчет"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,calc_date:0
+msgid "Calculation Date"
+msgstr "Дата расчета"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Coefficients"
+msgstr "Коэффициенты"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,complicity:0
+msgid "Complicity production"
+msgstr "Коєфициент сложности изделия"
+
+#. module: sale_advanced_products
+#: model:ir.actions.act_window,name:sale_advanced_products.sale_advanced_products_settings_action
+#: model:ir.ui.menu,name:sale_advanced_products.menu_sale_advanced_products_settings
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Configure Advanced Sales"
+msgstr "Настройки"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_body:0
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Corps"
+msgstr "Корпус"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_coef1:0
+msgid "Corps coefficient"
+msgstr "Корпус"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_price:0
+msgid "Corps price"
+msgstr "Цена корпуса"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,create_uid:0
+#: field:sale.advanced.products.add,create_uid:0
+#: field:sale.advanced.products.box,create_uid:0
+#: field:sale.advanced.products.settings,create_uid:0
+msgid "Created by"
+msgstr "Создано"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.add,create_date:0
+#: field:sale.advanced.products.box,create_date:0
+#: field:sale.advanced.products.settings,create_date:0
+msgid "Created on"
+msgstr "Создано"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,create_date:0
+msgid "Creation Date"
+msgstr "Дата создания"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,partner_id:0
+msgid "Customer"
+msgstr "Покупатель"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_door:0
+msgid "Doors"
+msgstr "Двери"
+
+#. module: sale_advanced_products
+#: selection:sale.advanced.products,state:0
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,furn_box:0
+#: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_form_view
+#: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_tree_view
+msgid "Drawers"
+msgstr "Ящики"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_box_mat:0
+msgid "Drawers material"
+msgstr "Материал ящиков"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_drilling:0
+msgid "Drilling"
+msgstr "Сверловка"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_front:0
+msgid "Facade"
+msgstr "Фасад"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_fix:0
+msgid "Fastener"
+msgstr "Система крепления"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Fixing"
+msgstr "Крепеж"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Furniture"
+msgstr "Фурнитура"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_coef2:0
+msgid "Furniture coefficient"
+msgstr "Фурнитура"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_price:0
+msgid "Furniture price"
+msgstr "Цена фурнитуры"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_hand:0
+msgid "Handle"
+msgstr "Ручка"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_hand1_qty:0
+msgid "Handle 1 Qty"
+msgstr "Ручка 1 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_hand1_type:0
+msgid "Handle 1 Type"
+msgstr "Ручка 1 тип"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_hand2_qty:0
+msgid "Handle 2 Qty"
+msgstr "Ручка 2 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_hand2_type:0
+msgid "Handle 2 Type"
+msgstr "Ручка 2 тип"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Handle type 1"
+msgstr "Ручка 1"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Handle type 2"
+msgstr "Ручка 2"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_h:0
+msgid "Height"
+msgstr "Высота"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_loop:0
+msgid "Hinge"
+msgstr "Петли"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_loop1_type:0
+msgid "Hinge 1 Type"
+msgstr "Петля 1 тип"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_loop2_type:0
+msgid "Hinge 2 Type"
+msgstr "Петля 2 тип"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Hinge type 1"
+msgstr "Петля 1"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Hinge type 2"
+msgstr "Петля 2"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,id:0
+#: field:sale.advanced.products.add,id:0
+#: field:sale.advanced.products.box,id:0
+#: field:sale.advanced.products.settings,id:0
+msgid "ID"
+msgstr "ИД"
+
+#. module: sale_advanced_products
+#: code:addons\sale_advanced_products\sale_advanced_products.py:125
+#, python-format
+msgid "Invalid Action!"
+msgstr "Внимание!!!"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,write_uid:0
+#: field:sale.advanced.products.add,write_uid:0
+#: field:sale.advanced.products.box,write_uid:0
+#: field:sale.advanced.products.settings,write_uid:0
+msgid "Last Updated by"
+msgstr "Обновлено"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,write_date:0
+#: field:sale.advanced.products.add,write_date:0
+#: field:sale.advanced.products.box,write_date:0
+#: field:sale.advanced.products.settings,write_date:0
+msgid "Last Updated on"
+msgstr "Обновлено"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,body_l:0
+#: field:sale.advanced.products.add,length:0
+#: field:sale.advanced.products.box,box_l:0
+msgid "Length"
+msgstr "Длина"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_light_l:0
+msgid "Lengths"
+msgstr "Длина"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_loop1_qty:0
+msgid "Loop 1 Qty"
+msgstr "Петля1 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_loop2_qty:0
+msgid "Loop 2 Qty"
+msgstr "Петля 2 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_minifix:0
+msgid "Minifix"
+msgstr "Минификс"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,acc_cut:0
+#: field:sale.advanced.products.settings,furn_cut:0
+msgid "Neckline"
+msgstr "Вырез"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_hand_cut:0
+msgid "Neckline type handle"
+msgstr "Вырез типа ручка"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,acc_hand_cut_qty:0
+msgid "Neckline type handle qty"
+msgstr "Кол-во вырезов типа ручка"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Necklines"
+msgstr "Вырезы"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Order"
+msgstr "Заказ"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,name:0
+msgid "Order name"
+msgstr "№ заказа"
+
+#. module: sale_advanced_products
+#: model:ir.model,name:sale_advanced_products.model_product_template
+msgid "Product Template"
+msgstr "Шаблон продукта"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products.add,qty:0
+#: field:sale.advanced.products.box,box_qty:0
+msgid "Qty"
+msgstr "Кол-во"
+
+#. module: sale_advanced_products
+#: model:ir.actions.act_window,name:sale_advanced_products.sale_advanced_products_action
+#: model:ir.ui.menu,name:sale_advanced_products.menu_sale_advanced_products
+msgid "Sale Advanced Products"
+msgstr "Заказы"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_tree_view
+msgid "Sale Advanced Products Orders"
+msgstr "Заказы"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,sale_order_id:0
+msgid "Sale Order"
+msgstr "Заказ на продажу"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,user_id:0
+msgid "Salesperson"
+msgstr "Продавец"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,acc_switch:0
+msgid "Sensor switch"
+msgstr "Сенсорный выключатель"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_switch:0
+msgid "Sensory switch"
+msgstr "Сенсорный выключатель"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_rack:0
+msgid "Shelvs"
+msgstr "Полки"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_shkanta:0
+msgid "Shkanta"
+msgstr "Шканта"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_side:0
+msgid "Sidewall"
+msgstr "Боковина"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_way:0
+msgid "Slide"
+msgstr "Направляющая"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.box,way:0
+msgid "Slides"
+msgstr "Направляющие"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.box,way_qty:0
+msgid "Slides qty"
+msgstr "Кол-во направляющих"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_tree_view
+msgid "Slides type"
+msgstr "Тип направляющих"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_fix_qty:0
+msgid "Small ironware Qty"
+msgstr "Кол-во крепежа"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_fix_type:0
+msgid "Small ironware Type"
+msgstr "Тип крепежа"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,state:0
+msgid "Status"
+msgstr "Статус"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Switch"
+msgstr "Выключатели"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.add,templ:0
+msgid "Template"
+msgstr "Шаблон"
+
+#. module: sale_advanced_products
+#: code:addons\sale_advanced_products\sale_advanced_products.py:125
+#, python-format
+msgid "To delete advanced order, you must delete sale order  before!"
+msgstr "Перед тем как удалить заказ, необходимо удалить заказ на продажу!"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,total_price:0
+msgid "Total price"
+msgstr "Всего"
+
+#. module: sale_advanced_products
+#: field:product.template,furn_towel:0
+msgid "Towel holder"
+msgstr "Полотенцедержатель"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_towel1_qty:0
+msgid "Towel holder 1 Qty"
+msgstr "Полотенцедержатель 1 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_towel1_type:0
+msgid "Towel holder 1 Type"
+msgstr "Полотенцедержатель 1 тип"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_towel2_qty:0
+msgid "Towel holder 2 Qty"
+msgstr "Полотенцедержатель 2 кол-во"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,acc_towel2_type:0
+msgid "Towel holder 2 Type"
+msgstr "Полотенцедержатель 2 тип"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Towel holder type 1"
+msgstr "Полотенцедержатель 1"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Towel holder type 2"
+msgstr "Полотенцедержатель 2"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,acc_light_type:0
+#: field:sale.advanced.products.add,type:0
+msgid "Type"
+msgstr "Тип"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,body_w:0
+#: field:sale.advanced.products.add,width:0
+#: field:sale.advanced.products.box,box_w:0
+msgid "Width"
+msgstr "Ширина"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,work_price:0
+msgid "Work price"
+msgstr "Стоимость работ"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Works"
+msgstr "Работа"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_coef5:0
+msgid "Works coefficient"
+msgstr "Работа"
+
