@@ -33,6 +33,7 @@ bla bla bla
 		'security/sale_advanced_products_security.xml',
         'sale_advanced_products.xml',
         'security/ir.model.access.csv',
+        'report/advanced_product_print.xml',
     ],
     'installable': True,
     'auto_install': False,

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="adv_prod_report" model="report.paperformat">
+                <field name="name">Adv Prod Report</field>
+                <field name="orientation">Landscape</field>
+        </record>
+
+        <report id="int_report"
+            string="Print Order Int"
+            model="sale.advanced.products"
+            report_type="qweb-pdf"
+            name="sale_advanced_products.int_report_templ"
+            file="sale_advanced_products.int_report_templ"/>
+
+        <record id="int_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="adv_prod_report"/>
+        </record>
+
+        <template id="int_report_templ">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                     <t t-call="report.external_layout">
+                        <div class="page">
+                            <table class="table-condensed" style="width: 100%; height: 650px;">
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2" style="width: 40%; border-right: 2px solid black;">
+                                            <h2>Order: <span t-field="o.name"/></h2>
+                                            <h2>Order date: <span t-field="o.calc_date"/></h2>
+                                            <p>Customer name: <span t-field="o.partner_id.name" style="font-size: 16px;"/></p>
+                                            <p>Customer phone: <span t-field="o.partner_id.phone" style="font-size: 16px;"/></p>
+                                            <p>Link: <span t-field="o.link"/></p>
+                                            <p>Description: <span t-field="o.description"/></p>
+                                            <p>Corps price: <span t-field="o.body_price_free"/></p>
+                                            <p>Furniture price: <span t-field="o.find_price_free"/></p>
+                                            <p>Adds price: <span t-field="o.add_price_free"/></p>
+                                            <p>Accessories price: <span t-field="o.acc_price_free"/></p>
+                                            <p>Work price: <span t-field="o.work_price_free"/></p>
+                                            <p>Salesperson name: <span t-field="o.user_id.name" style="font-size: 16px;"/></p>
+                                            <p>Salesperson phone: <span t-field="o.user_id.phone" style="font-size: 16px;"/></p>
+                                        </td>
+                                        <td style="border-bottom: 2px solid black; height: 325;">
+                                            <!--<p>Ячейка 2</p>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!--<p>Ячейка 3</p>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <report
+            id="ext_report"
+            string="Print Order Ext"
+            model="sale.advanced.products"
+            report_type="qweb-pdf"
+            name="sale_advanced_products.ext_report_templ"
+            file="sale_advanced_products.ext_report_templ"/>
+
+        <record id="ext_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="adv_prod_report"/>
+        </record>
+
+        <template id="ext_report_templ" name="sale_advanced_products.ext_report_templ">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <table class="table-condensed" style="width: 100%; height: 650px;">
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2" style="width: 40%; border-right: 2px solid black;">
+                                            <h2>Order: <span t-field="o.name"/></h2>
+                                            <h2>Order date: <span t-field="o.calc_date"/></h2>
+                                            <p>Customer name: <span t-field="o.partner_id.name" style="font-size: 16px;"/></p>
+                                            <p>Customer phone: <span t-field="o.partner_id.phone" style="font-size: 16px;"/></p>
+                                            <p>Link: <span t-field="o.link"/></p>
+                                            <p>Description: <span t-field="o.description"/></p>
+                                            <p>Corps price: <span t-field="o.body_price"/></p>
+                                            <p>Furniture price: <span t-field="o.find_price"/></p>
+                                            <p>Adds price: <span t-field="o.add_price"/></p>
+                                            <p>Accessories price: <span t-field="o.acc_price"/></p>
+                                            <p>Work price: <span t-field="o.work_price"/></p>
+                                            <h2>Total price: <span t-field="o.total_price"/></h2>
+                                            <p>Salesperson name: <span t-field="o.user_id.name" style="font-size: 16px;"/></p>
+                                            <p>Salesperson phone: <span t-field="o.user_id.phone" style="font-size: 16px;"/></p>
+                                        </td>
+                                        <td style="border-bottom: 2px solid black; height: 325;">
+                                            <!--<p>Ячейка 2</p>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!--<p>Ячейка 3</p>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

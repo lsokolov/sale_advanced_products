@@ -9,6 +9,7 @@
                 <form string="Order">
                     <sheet>
                         <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+                            <div>
                             <button name="adv_order_calc" 
                                 type="object"
                                 class="oe_inline oe_stat_button"
@@ -17,6 +18,7 @@
                                 confirm="Are you sure you want to do this?"
                                 help="Calculate total price from pricelist">
                              </button>
+                            </div>
                         </div>
                         <group>
                         <div class="oe_left" style="width: 500px;">

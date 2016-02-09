@@ -205,7 +205,7 @@ class sale_advanced_products(osv.osv):
             for door in order.furn_aldoors:
                 price_aldoors += (float(self.read_price(cr, uid, 'furn_door_angle')) * (door.aldoor_l + door.aldoor_w) / 1000
                     + (float(self.read_price(cr, uid, 'furn_door_prof'))
-                    + door.aldoor_l * door.aldoor_w * float(self.read_price(cr, uid, 'furn_door_glass')) / 1000000))
+                    + door.aldoor_l * door.aldoor_w * float(self.read_price(cr, uid, 'furn_door_glass')) / 1000000))*door.aldoor_qty
                 doors_qty = doors_qty + door.aldoor_qty
             price_find = price_hand + price_loop + price_fix + price_anhand + price_box + price_aldoors
 
