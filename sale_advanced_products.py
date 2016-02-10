@@ -57,31 +57,31 @@ class sale_advanced_products(osv.osv):
         'attachments': fields.many2many('ir.attachment', 'class_ir_attachments_rel', 'class_id', 'attachment_id',
                                         'Attachments'),
 
-        'body_l': fields.float('Length', readonly=False),
-        'body_w': fields.float('Width', readonly=False),
-        'body_h': fields.float('Height', readonly=False),
-        'body_door': fields.float('Doors', readonly=False),
-        'body_rack': fields.float('Shelvs', readonly=False),
+        'body_l': fields.integer('Length', readonly=False),
+        'body_w': fields.integer('Width', readonly=False),
+        'body_h': fields.integer('Height', readonly=False),
+        'body_door': fields.integer('Doors', readonly=False),
+        'body_rack': fields.integer('Shelvs', readonly=False),
         'body_side': fields.many2one('product.template', 'Sidewall', domain=[('furn_body', '=', True)], readonly=False),
         'body_front': fields.many2one('product.template', 'Facade', domain=[('furn_body', '=', True)], readonly=False),
         'body_bott': fields.many2one('product.template', 'Bottom', domain=[('furn_body', '=', True)], readonly=False),
 
         'find_hand1_type': fields.many2one('product.template', 'Handle 1 Type', domain=[('furn_hand', '=', True)],
                                            readonly=False),
-        'find_hand1_qty': fields.float('Handle 1 Qty', readonly=False),
+        'find_hand1_qty': fields.integer('Handle 1 Qty', readonly=False),
         'find_hand2_type': fields.many2one('product.template', 'Handle 2 Type', domain=[('furn_hand', '=', True)],
                                            readonly=False),
-        'find_hand2_qty': fields.float('Handle 2 Qty', readonly=False),
+        'find_hand2_qty': fields.integer('Handle 2 Qty', readonly=False),
         'find_loop1_type': fields.many2one('product.template', 'Hinge 1 Type', domain=[('furn_loop', '=', True)],
                                            readonly=False),
-        'find_loop1_qty': fields.float('Loop 1 Qty', readonly=False),
+        'find_loop1_qty': fields.integer('Loop 1 Qty', readonly=False),
         'find_loop2_type': fields.many2one('product.template', 'Hinge 2 Type', domain=[('furn_loop', '=', True)],
                                            readonly=False),
-        'find_loop2_qty': fields.float('Loop 2 Qty', readonly=False),
+        'find_loop2_qty': fields.integer('Loop 2 Qty', readonly=False),
         'find_fix_type': fields.many2one('product.template', 'Small ironware Type', domain=[('furn_fix', '=', True)],
                                          readonly=False),
-        'find_fix_qty': fields.float('Small ironware Qty', readonly=False),
-        'find_anhand_qty': fields.float('Anti-handle Qty', readonly=False),
+        'find_fix_qty': fields.integer('Small ironware Qty', readonly=False),
+        'find_anhand_qty': fields.integer('Anti-handle Qty', readonly=False),
 
         'furn_box': fields.one2many('sale.advanced.products.box', 'adv_prod_order_id', 'Drawers', readonly=False),
 
@@ -93,16 +93,16 @@ class sale_advanced_products(osv.osv):
 
         'acc_light_type': fields.many2one('product.template', 'Type', domain=[('furn_light', '=', True)],
                                           readonly=False),
-        'acc_light_l': fields.float('Lengths', readonly=False),
+        'acc_light_l': fields.integer('Lengths', readonly=False),
         'acc_switch': fields.boolean('Sensor switch'),
         'acc_bin_type': fields.many2one('product.template', 'Bucket Type', domain=[('furn_bin', '=', True)],
                                         readonly=False),
-        'acc_bin_qty': fields.float('Bucket Qty', readonly=False),
+        'acc_bin_qty': fields.integer('Bucket Qty', readonly=False),
         'acc_towel_type': fields.many2one('product.template', 'Towel holder Type', domain=[('furn_towel', '=', True)],
                                           readonly=False),
-        'acc_towel_qty': fields.float('Towel holder Qty', readonly=False),
+        'acc_towel_qty': fields.integer('Towel holder Qty', readonly=False),
         'acc_cut': fields.boolean('Neckline'),
-        'acc_hand_cut_qty': fields.float('Neckline type handle qty', readonly=False),
+        'acc_hand_cut_qty': fields.integer('Neckline type handle qty', readonly=False),
 
         'body_price': fields.float('Corps price', readonly=True),
         'body_price_free': fields.float('Corps price (without K)', readonly=True),
@@ -149,22 +149,14 @@ class sale_advanced_products(osv.osv):
 
     def adv_order_calc(self, cr, uid, ids, context=None):
 
-        # import os
-        # raise osv.except_osv(_("Warning!"), _(str(os.getppid())))
         for order in self.browse(cr, uid, ids, context):
 
-            # price_body = 0
-            # price_find = 0
-            # price_box = 0
-            # price_add = 0
-            # price_acc = 0
-            # price_work = 0
             coef_list = {}
-            for n in (1, 2, 3, 4, 5):
-                coef_list['c' + str(n)] = 1
+            for n in range(1, 6):
+                coef_list['c' + str(n)] = float('1.0')
 
             # Calculating coefficients
-            for n in (1, 2, 3, 4, 5):
+            for n in range(1, 6):
                 coef = float(self.pool.get('ir.config_parameter').get_param(cr, uid, 'furn_coef' + str(n)))
                 if coef:
                     coef_list['c' + str(n)] = coef
@@ -193,7 +185,6 @@ class sale_advanced_products(osv.osv):
             price_box_mat = self.read_price(cr, uid, 'furn_box_mat')
             price_box = 0
             price_box_w = 0
-            # boxes = 0
             for box in order.furn_box:
                 price_box += ((
                               box.box_w * box.box_l + box.box_w * 100) * price_box_mat / 1000000 + box.way.list_price) * box.box_qty
@@ -323,26 +314,24 @@ class product_template(osv.osv):
 class sale_advanced_products_box(osv.osv):
     _name = 'sale.advanced.products.box'
     _columns = {
-        'box_l': fields.float('Length', readonly=False),
-        'box_w': fields.float('Width', readonly=False),
-        'box_qty': fields.float('Qty', readonly=False),
+        'box_l': fields.integer('Length', readonly=False),
+        'box_w': fields.integer('Width', readonly=False),
+        'box_qty': fields.integer('Qty', readonly=False),
         'way': fields.many2one('product.template', 'Slides', domain=[('furn_way', '=', True)], readonly=False),
-        'way_qty': fields.float('Slides qty', readonly=False),
         'adv_prod_order_id': fields.many2one('sale.advanced.products', 'Advanced Product Order'),
     }
 
     _defaults = {
         'box_qty': 1,
-        'way_qty': 2
     }
 
 
 class sale_advanced_products_aldoors(osv.osv):
     _name = 'sale.advanced.products.aldoors'
     _columns = {
-        'aldoor_l': fields.float('Length', readonly=False),
-        'aldoor_w': fields.float('Width', readonly=False),
-        'aldoor_qty': fields.float('Qty', readonly=False),
+        'aldoor_l': fields.integer('Length', readonly=False),
+        'aldoor_w': fields.integer('Width', readonly=False),
+        'aldoor_qty': fields.integer('Qty', readonly=False),
         'adv_prod_order_id': fields.many2one('sale.advanced.products', 'Advanced Product Order'),
     }
 
@@ -354,9 +343,9 @@ class sale_advanced_products_aldoors(osv.osv):
 class sale_advanced_products_add(osv.osv):
     _name = 'sale.advanced.products.add'
     _columns = {
-        'length': fields.float('Length', readonly=False),
-        'width': fields.float('Width', readonly=False),
-        'qty': fields.float('Qty', readonly=False),
+        'length': fields.integer('Length', readonly=False),
+        'width': fields.integer('Width', readonly=False),
+        'qty': fields.integer('Qty', readonly=False),
         'templ': fields.boolean('Template'),
         'type': fields.many2one('product.template', 'Type', domain=[('furn_add', '=', True)], readonly=False),
         'adv_prod_order_id': fields.many2one('sale.advanced.products', 'Advanced Product Order'),

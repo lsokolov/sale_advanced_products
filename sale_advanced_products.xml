@@ -26,11 +26,10 @@
                                 <h1><field name="name" class="oe_inline"/></h1>
                             </div>
                         </div>
-                        <div>
-                            <label for="link"/>
-                            <field name="link"/>
-                        </div>
                         </group>
+                        <div>
+                            <field name="link" widget="url" placeholder="Product URL"/>
+                        </div>
                         <div>
                             <label for="description"/>
                             <field name="description"/>
@@ -187,7 +186,6 @@
                         <field name="box_w"/>
                         <field name="box_qty"/>
                         <field name="way"/>
-                        <field name="way_qty"/>
                     </group>
                 </form>
             </field>
@@ -202,8 +200,8 @@
                 <tree string="Drawers">
                     <field name="box_l"/>
                     <field name="box_w"/>
-                    <field name="way" string="Slides type"/>
                     <field name="box_qty"/>
+                    <field name="way" string="Slides type"/>
                 </tree>
             </field>
         </record>

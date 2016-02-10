@@ -9,7 +9,7 @@
         <report id="int_report"
             string="Print Order Int"
             model="sale.advanced.products"
-            report_type="qweb-pdf"
+            report_type="qweb-html"
             name="sale_advanced_products.int_report_templ"
             file="sale_advanced_products.int_report_templ"/>
 
@@ -22,25 +22,145 @@
                 <t t-foreach="docs" t-as="o">
                      <t t-call="report.external_layout">
                         <div class="page">
-                            <table class="table-condensed" style="width: 100%; height: 650px;">
-                                <tbody>
+                            <table class="table-condensed" style="width: 100%; height: 650px; font-size: 8px">
+                                <!--<tbody style="font-size: 8px">-->
                                     <tr>
-                                        <td rowspan="2" style="width: 40%; border-right: 2px solid black;">
-                                            <h2>Order: <span t-field="o.name"/></h2>
-                                            <h2>Order date: <span t-field="o.calc_date"/></h2>
-                                            <p>Customer name: <span t-field="o.partner_id.name" style="font-size: 16px;"/></p>
-                                            <p>Customer phone: <span t-field="o.partner_id.phone" style="font-size: 16px;"/></p>
-                                            <p>Link: <span t-field="o.link"/></p>
-                                            <p>Description: <span t-field="o.description"/></p>
-                                            <p>Corps price: <span t-field="o.body_price_free"/></p>
-                                            <p>Furniture price: <span t-field="o.find_price_free"/></p>
-                                            <p>Adds price: <span t-field="o.add_price_free"/></p>
-                                            <p>Accessories price: <span t-field="o.acc_price_free"/></p>
-                                            <p>Work price: <span t-field="o.work_price_free"/></p>
-                                            <p>Salesperson name: <span t-field="o.user_id.name" style="font-size: 16px;"/></p>
-                                            <p>Salesperson phone: <span t-field="o.user_id.phone" style="font-size: 16px;"/></p>
+                                        <td rowspan="2" style="width: 50%; border-right: 2px solid black">
+                                            <h4>Order: <span t-field="o.name"/></h4>
+                                            <h4>Order date: <span t-field="o.calc_date"/></h4>
+                                            <table class="table-condensed" style="width: 100%">
+                                                <tbody valign="baseline" align="left" style="font-size: 10px">
+                                                <tr>
+                                                        <td valign="middle" style="border-left: 1px solid black; padding: 2px">
+                                                            <p><b>Customer name: </b><span t-field="o.partner_id.name"/></p>
+                                                        </td>
+                                                        <td style="border-left: 1px solid black; padding: 2px">
+                                                            <p><b>Salesperson name: </b><span t-field="o.user_id.name"/></p>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="middle" style="border-left: 1px solid black; padding: 2px">
+                                                        <p><b>Customer phone: </b><span t-field="o.partner_id.phone"/></p>
+                                                    </td>
+                                                    <td valign="middle" style="border-left: 1px solid black; padding: 2px">
+                                                        <p><b>Salesperson phone: </b><span t-field="o.user_id.phone"/></p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <p><b>Link: </b><span t-field="o.link"/></p>
+                                            <p><b>Description: </b><span t-field="o.description"/></p>
+                                            <table class="table-condensed">
+                                                <tr>
+                                                    <td>
+                                                        <p><b>Corps price: </b><span t-field="o.body_price_free"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <p><b>Furniture price: </b><span t-field="o.find_price_free"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <p><b>Adds price: </b><span t-field="o.add_price_free"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <p><b>Accessories price: </b><span t-field="o.acc_price_free"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <p><b>Work price: </b><span t-field="o.work_price_free"/></p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <h6><u><b>Corps</b></u></h6>
+                                            <div>
+                                            <table class="table-condensed" style="width: 100%">
+                                                <tr>
+                                                    <td>
+                                                        <p><b>Length:</b> <span t-field="o.body_l"/></p>
+                                                        <p><b>Width:</b> <span t-field="o.body_w"/></p>
+                                                        <p><b>Height:</b> <span t-field="o.body_h"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <p><b>Sidewall:</b> <span t-field="o.body_side.name"/></p>
+                                                        <p><b>Facade:</b> <span t-field="o.body_front.name"/></p>
+                                                        <p><b>Bottom:</b> <span t-field="o.body_bott.name"/></p>
+                                                    </td>
+                                                    <td>
+                                                        <t t-if="o.body_door"><p><b>Doors:</b> <span t-field="o.body_door"/></p></t>
+                                                        <t t-if="o.body_rack"><p><b>Shelvs:</b> <span t-field="o.body_rack"/></p></t>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </div>
+                                            <t t-if="o.find_hand1_type or o.find_hand2_type or o.find_loop1_type or o.find_loop2_type or o.find_fix_type or o.find_anhand_qty or o.furn_box or o.furn_aldoors">
+                                                <h6><u><b>Furniture</b></u></h6>
+                                                <table class="table-condensed" style="width: 100%">
+                                                    <tr>
+                                                        <td>
+                                                            <t t-if="o.find_hand1_type"><p><b>Handle type 1:</b> <span t-field="o.find_hand1_type"/> <b>qty:</b> <span t-field="o.find_hand1_qty"/> pcs</p></t>
+                                                            <t t-if="o.find_hand2_type"><p><b>Handle type 2:</b> <span t-field="o.find_hand2_type"/> <b>qty:</b> <span t-field="o.find_hand2_qty"/> pcs</p></t>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="o.find_loop1_type"><p><b>Hinge type 1:</b> <span t-field="o.find_loop1_type"/> <b>qty:</b> <span t-field="o.find_loop1_qty"/> pcs</p></t>
+                                                            <t t-if="o.find_loop2_type"><p><b>Hinge type 2:</b> <span t-field="o.find_loop2_type"/> <b>qty:</b> <span t-field="o.find_loop2_qty"/> pcs</p></t>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <t t-if="o.find_fix_type"><td><p><b>Fixing type:</b> <span t-field="o.find_fix_type"/> <b>qty:</b> <span t-field="o.find_fix_qty"/> pcs</p></td></t>
+                                                        <t t-if="o.find_anhand_qty"><td><p><b>Anti-Handle qty:</b> <span t-field="o.find_anhand_qty"/> pcs</p></td></t>
+                                                    </tr>
+                                                    <tr>
+                                                        <t t-if="o.furn_box">
+                                                            <td>
+                                                            <table style="width: 100%">
+                                                                <tr><th><u><b>Drawers</b></u></th></tr>
+                                                                <tr><td width="20%"><p>Length</p></td><td width="20%"><p>Width</p></td><td width="20%"><p>Qty</p></td><td width="40%"><p>Slides type</p></td></tr>
+                                                                <tr t-foreach="o.furn_box" t-as="b">
+                                                                    <td><p><span t-field="b.box_l"/></p></td><td><p><span t-field="b.box_w"/></p></td><td><p><span t-field="b.box_qty"/></p></td><td><p><span t-field="b.way"/></p></td>
+                                                                </tr>
+                                                            </table>
+                                                            </td>
+                                                        </t>
+                                                        <t t-if="o.furn_aldoors">
+                                                            <td>
+                                                                <table style="width: 100%">
+                                                                    <tr><th><u><b>Aluminium doors</b></u></th></tr>
+                                                                    <tr><td width="35%"><p>Length</p></td><td width="35%"><p>Width</p></td><td width="30%"><p>Qty</p></td></tr>
+                                                                    <tr t-foreach="o.furn_aldoors" t-as="a">
+                                                                        <td><p><span t-field="a.aldoor_l"/></p></td><td><p><span t-field="a.aldoor_w"/></p></td><td><p><span t-field="a.aldoor_qty"/></p></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </t>
+                                                    </tr>
+                                                </table>
+                                            </t>
+                                            <t t-if="o.furn_add">
+                                                <h6><u><b>Additional materials</b></u></h6>
+                                                <table style="width: 50%">
+                                                    <thead>
+                                                    <tr><td width="40%"><p>Type</p></td><td width="20%"><p>Length</p></td><td width="20%"><p>Width</p></td><td width="20%"><p>Qty</p></td></tr>
+                                                    </thead>
+                                                    <tr t-foreach="o.furn_add" t-as="m">
+                                                        <td><p><span t-field="m.type"/></p></td><td><p><span t-field="m.length"/></p></td><td><p><span t-field="m.width"/></p></td><td><p><span t-field="m.qty"/></p></td>
+                                                    </tr>
+                                                </table>
+                                            </t>
+                                            <t t-if="o.acc_light_type or o.acc_switch or o.acc_bin_type or o.acc_towel_type or o.acc_cut or o.acc_hand_cut_qty">
+                                                <h6><u><b>Accessories</b></u></h6>
+                                                <table class="table-condensed" style="width: 100%">
+                                                    <tr>
+                                                        <t t-if="o.acc_light_type"><td><p><b>Backlight type:</b> <span t-field="o.acc_light_type"/> <b>Length:</b> <span t-field="o.acc_light_l"/> mm</p></td></t>
+                                                        <t t-if="o.acc_bin_type"><td><p><b>Bucket type:</b> <span t-field="o.acc_bin_type"/> <b>qty:</b> <span t-field="o.acc_bin_qty"/> pcs</p></td></t>
+                                                        <t t-if="o.acc_towel_type"><td><p><b>Bucket type:</b> <span t-field="o.acc_towel_type"/> <b>qty:</b> <span t-field="o.acc_towel_qty"/> pcs</p></td></t>
+                                                    </tr>
+                                                    <tr>
+                                                        <t t-if="o.acc_switch"><td><p><b>Sensor switch:</b> Yes</p></td></t>
+                                                        <t t-if="o.acc_cut"><td><p><b>Neckline:</b> Yes</p></td></t>
+                                                        <t t-if="o.acc_hand_cut_qty"><td><p><b>Neckline type handle qty:</b> <span t-field="o.acc_hand_cut_qty"/> pcs</p></td></t>
+                                                    </tr>
+                                                </table>
+                                            </t>
                                         </td>
-                                        <td style="border-bottom: 2px solid black; height: 325;">
+                                        <td style="border-bottom: 2px solid black; height: 325">
                                             <!--<p>Ячейка 2</p>-->
                                         </td>
                                     </tr>
@@ -49,7 +169,7 @@
                                             <!--<p>Ячейка 3</p>-->
                                         </td>
                                     </tr>
-                                </tbody>
+                                <!--</tbody>-->
                             </table>
                         </div>
                     </t>
@@ -60,7 +180,7 @@
             id="ext_report"
             string="Print Order Ext"
             model="sale.advanced.products"
-            report_type="qweb-pdf"
+            report_type="qweb-html"
             name="sale_advanced_products.ext_report_templ"
             file="sale_advanced_products.ext_report_templ"/>
 
