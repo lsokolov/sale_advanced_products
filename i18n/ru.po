@@ -1,23 +1,26 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* sale_advanced_products
+# 	* sale_advanced_products
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0-9d0bd28\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-28 13:37+0000\n"
-"PO-Revision-Date: 2016-01-28 13:37+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2016-02-11 12:22+0000\n"
+"PO-Revision-Date: 2016-02-11 14:24+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 1.6.9\n"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Accessories"
 msgstr "Аксессуары"
 
@@ -32,6 +35,17 @@ msgid "Accessories price"
 msgstr "Цена аксессуаров"
 
 #. module: sale_advanced_products
+#: field:sale.advanced.products,acc_price_free:0
+msgid "Accessories price (without K)"
+msgstr "Accessories price (without K)"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Accessories price:"
+msgstr "Цена аксессуаров:"
+
+#. module: sale_advanced_products
 #: field:product.template,furn_add:0
 msgid "Add. mat."
 msgstr "Доп. мат."
@@ -41,6 +55,8 @@ msgstr "Доп. мат."
 #: field:sale.advanced.products,furn_add:0
 #: view:sale.advanced.products.add:sale_advanced_products.sale_advanced_products_add_form_view
 #: view:sale.advanced.products.add:sale_advanced_products.sale_advanced_products_add_tree_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Additional materials"
 msgstr "Дополнительные материалы"
 
@@ -55,7 +71,19 @@ msgid "Adds price"
 msgstr "Цена доп. мат."
 
 #. module: sale_advanced_products
+#: field:sale.advanced.products,add_price_free:0
+msgid "Adds price (without K)"
+msgstr "Adds price (without K)"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Adds price:"
+msgstr "Цена доп. мат.:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products.add,adv_prod_order_id:0
+#: field:sale.advanced.products.aldoors,adv_prod_order_id:0
 #: field:sale.advanced.products.box,adv_prod_order_id:0
 msgid "Advanced Product Order"
 msgstr "Заказ"
@@ -66,9 +94,44 @@ msgid "Advanced category"
 msgstr "Категория"
 
 #. module: sale_advanced_products
+#: view:sale.advanced.products.aldoors:sale_advanced_products.sale_advanced_products_aldoors_form_view
+#: view:sale.advanced.products.aldoors:sale_advanced_products.sale_advanced_products_aldoors_tree_view
+msgid "Al doors"
+msgstr "Алюминиевые двери"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_door_angle:0
+msgid "Al doors angle"
+msgstr "Уголок"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_door_glass:0
+msgid "Al doors glass"
+msgstr "Стекло"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products.settings,furn_door_prof:0
+msgid "Al doors profile"
+msgstr "Профиль"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products,furn_aldoors:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Aluminium doors"
+msgstr "Алюминиевые двери"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 msgid "Anti-Handle"
 msgstr "Антиручка"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Anti-Handle qty:"
+msgstr "Тип подсветки:"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products.settings,furn_anhand:0
@@ -107,7 +170,14 @@ msgid "Backlight"
 msgstr "Подсветка"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Backlight type:"
+msgstr "Подсветка:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products.settings,furn_acc_light_w:0
 msgid "Backlighting"
 msgstr "Подсветка"
 
@@ -117,44 +187,38 @@ msgid "Bottom"
 msgstr "Дно"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Bottom:"
+msgstr "Дно:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products.settings,furn_boxing:0
 msgid "Boxing"
 msgstr "Упаковка"
 
 #. module: sale_advanced_products
 #: field:product.template,furn_bin:0
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products.settings,furn_acc_bin_w:0
 msgid "Bucket"
 msgstr "Корзина"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_bin1_qty:0
-msgid "Bucket 1 Qty"
-msgstr "Корзина 1 кол-во"
+#: field:sale.advanced.products,acc_bin_qty:0
+msgid "Bucket Qty"
+msgstr "Кол-во корзин"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_bin1_type:0
-msgid "Bucket 1 Type"
-msgstr "Козина 1 Тип"
+#: field:sale.advanced.products,acc_bin_type:0
+msgid "Bucket Type"
+msgstr "Тип корзин"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_bin2_qty:0
-msgid "Bucket 2 Qty"
-msgstr "Корзина 2 кол-во"
-
-#. module: sale_advanced_products
-#: field:sale.advanced.products,acc_bin2_type:0
-msgid "Bucket 2 Type"
-msgstr "Козина 1 Тип"
-
-#. module: sale_advanced_products
-#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
-msgid "Bucket type 1"
-msgstr "Корзина 1"
-
-#. module: sale_advanced_products
-#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
-msgid "Bucket type 2"
-msgstr "Козина 2"
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Bucket type:"
+msgstr "Тип корзин:"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
@@ -207,6 +271,8 @@ msgstr "Настройки"
 #: field:product.template,furn_body:0
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Corps"
 msgstr "Корпус"
 
@@ -221,8 +287,20 @@ msgid "Corps price"
 msgstr "Цена корпуса"
 
 #. module: sale_advanced_products
+#: field:sale.advanced.products,body_price_free:0
+msgid "Corps price (without K)"
+msgstr "Corps price (without K)"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Corps price:"
+msgstr "Цена корпуса:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products,create_uid:0
 #: field:sale.advanced.products.add,create_uid:0
+#: field:sale.advanced.products.aldoors,create_uid:0
 #: field:sale.advanced.products.box,create_uid:0
 #: field:sale.advanced.products.settings,create_uid:0
 msgid "Created by"
@@ -230,6 +308,7 @@ msgstr "Создано"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products.add,create_date:0
+#: field:sale.advanced.products.aldoors,create_date:0
 #: field:sale.advanced.products.box,create_date:0
 #: field:sale.advanced.products.settings,create_date:0
 msgid "Created on"
@@ -246,9 +325,38 @@ msgid "Customer"
 msgstr "Покупатель"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Customer name:"
+msgstr "Покупатель:"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Customer phone:"
+msgstr "Телефон:"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,description:0
+msgid "Description"
+msgstr "Описание"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Description:"
+msgstr "Описание:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products,body_door:0
 msgid "Doors"
 msgstr "Двери"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Doors:"
+msgstr "Двери:"
 
 #. module: sale_advanced_products
 #: selection:sale.advanced.products,state:0
@@ -260,6 +368,8 @@ msgstr "Черновик"
 #: field:sale.advanced.products,furn_box:0
 #: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_form_view
 #: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_tree_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Drawers"
 msgstr "Ящики"
 
@@ -279,6 +389,12 @@ msgid "Facade"
 msgstr "Фасад"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Facade:"
+msgstr "Фасад:"
+
+#. module: sale_advanced_products
 #: field:product.template,furn_fix:0
 msgid "Fastener"
 msgstr "Система крепления"
@@ -289,8 +405,16 @@ msgid "Fixing"
 msgstr "Крепеж"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Fixing type:"
+msgstr "Крепеж:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Furniture"
 msgstr "Фурнитура"
 
@@ -303,6 +427,17 @@ msgstr "Фурнитура"
 #: field:sale.advanced.products,find_price:0
 msgid "Furniture price"
 msgstr "Цена фурнитуры"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,find_price_free:0
+msgid "Furniture price (without K)"
+msgstr "Furniture price (without K)"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Furniture price:"
+msgstr "Цена фурнитуры:"
 
 #. module: sale_advanced_products
 #: field:product.template,furn_hand:0
@@ -335,14 +470,32 @@ msgid "Handle type 1"
 msgstr "Ручка 1"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Handle type 1:"
+msgstr "Ручка 1:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 msgid "Handle type 2"
 msgstr "Ручка 2"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Handle type 2:"
+msgstr "Ручка 2:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products,body_h:0
 msgid "Height"
 msgstr "Высота"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Height:"
+msgstr "Высота:"
 
 #. module: sale_advanced_products
 #: field:product.template,furn_loop:0
@@ -365,27 +518,45 @@ msgid "Hinge type 1"
 msgstr "Петля 1"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Hinge type 1:"
+msgstr "Петля 1:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 msgid "Hinge type 2"
 msgstr "Петля 2"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,id:0
-#: field:sale.advanced.products.add,id:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Hinge type 2:"
+msgstr "Петля 2:"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,id:0 field:sale.advanced.products.add,id:0
+#: field:sale.advanced.products.aldoors,id:0
 #: field:sale.advanced.products.box,id:0
 #: field:sale.advanced.products.settings,id:0
 msgid "ID"
 msgstr "ИД"
 
 #. module: sale_advanced_products
-#: code:addons\sale_advanced_products\sale_advanced_products.py:125
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "Installation"
+msgstr "Инсталяция"
+
+#. module: sale_advanced_products
+#: code:addons/sale_advanced_products/sale_advanced_products.py:133
 #, python-format
 msgid "Invalid Action!"
-msgstr "Внимание!!!"
+msgstr "Некорректное действие!"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,write_uid:0
 #: field:sale.advanced.products.add,write_uid:0
+#: field:sale.advanced.products.aldoors,write_uid:0
 #: field:sale.advanced.products.box,write_uid:0
 #: field:sale.advanced.products.settings,write_uid:0
 msgid "Last Updated by"
@@ -394,6 +565,7 @@ msgstr "Обновлено"
 #. module: sale_advanced_products
 #: field:sale.advanced.products,write_date:0
 #: field:sale.advanced.products.add,write_date:0
+#: field:sale.advanced.products.aldoors,write_date:0
 #: field:sale.advanced.products.box,write_date:0
 #: field:sale.advanced.products.settings,write_date:0
 msgid "Last Updated on"
@@ -403,14 +575,34 @@ msgstr "Обновлено"
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: field:sale.advanced.products,body_l:0
 #: field:sale.advanced.products.add,length:0
+#: field:sale.advanced.products.aldoors,aldoor_l:0
 #: field:sale.advanced.products.box,box_l:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Length"
 msgstr "Длина"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Length:"
+msgstr "Длина:"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,acc_light_l:0
 msgid "Lengths"
 msgstr "Длина"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,link:0
+msgid "Link"
+msgstr "Ссылка"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Link:"
+msgstr "Ссылка:"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,find_loop1_qty:0
@@ -446,6 +638,18 @@ msgid "Neckline type handle qty"
 msgstr "Кол-во вырезов типа ручка"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Neckline type handle qty:"
+msgstr "Кол-во вырезов типа ручка:"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Neckline:"
+msgstr "Вырезы:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 msgid "Necklines"
 msgstr "Вырезы"
@@ -456,9 +660,36 @@ msgid "Order"
 msgstr "Заказ"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Order date:"
+msgstr "Дата заказа:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products,name:0
 msgid "Order name"
 msgstr "№ заказа"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Order:"
+msgstr "Заказ:"
+
+#. module: sale_advanced_products
+#: view:res.partner:sale_advanced_products.res_partner_simple_form_view
+msgid "Partner"
+msgstr "Покупатель"
+
+#. module: sale_advanced_products
+#: model:ir.actions.report.xml,name:sale_advanced_products.ext_report
+msgid "Print Order Ext"
+msgstr "Заказ для покупателя"
+
+#. module: sale_advanced_products
+#: model:ir.actions.report.xml,name:sale_advanced_products.int_report
+msgid "Print Order Int"
+msgstr "Внутренний заказ"
 
 #. module: sale_advanced_products
 #: model:ir.model,name:sale_advanced_products.model_product_template
@@ -467,8 +698,16 @@ msgstr "Шаблон продукта"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+msgid "Product URL"
+msgstr "Ссылка на продукт"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: field:sale.advanced.products.add,qty:0
+#: field:sale.advanced.products.aldoors,aldoor_qty:0
 #: field:sale.advanced.products.box,box_qty:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Qty"
 msgstr "Кол-во"
 
@@ -494,10 +733,28 @@ msgid "Salesperson"
 msgstr "Продавец"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Salesperson name:"
+msgstr "Продавец:"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Salesperson phone:"
+msgstr "Телефон:"
+
+#. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: field:sale.advanced.products,acc_switch:0
 msgid "Sensor switch"
 msgstr "Сенсорный выключатель"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Sensor switch:"
+msgstr "Сенсорный выключатель:"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products.settings,furn_switch:0
@@ -510,6 +767,12 @@ msgid "Shelvs"
 msgstr "Полки"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Shelvs:"
+msgstr "Полки:"
+
+#. module: sale_advanced_products
 #: field:sale.advanced.products.settings,furn_shkanta:0
 msgid "Shkanta"
 msgstr "Шканта"
@@ -518,6 +781,12 @@ msgstr "Шканта"
 #: field:sale.advanced.products,body_side:0
 msgid "Sidewall"
 msgstr "Боковина"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Sidewall:"
+msgstr "Боковина:"
 
 #. module: sale_advanced_products
 #: field:product.template,furn_way:0
@@ -530,12 +799,9 @@ msgid "Slides"
 msgstr "Направляющие"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products.box,way_qty:0
-msgid "Slides qty"
-msgstr "Кол-во направляющих"
-
-#. module: sale_advanced_products
 #: view:sale.advanced.products.box:sale_advanced_products.sale_advanced_products_box_tree_view
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Slides type"
 msgstr "Тип направляющих"
 
@@ -556,6 +822,7 @@ msgstr "Статус"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products.settings,furn_acc_switch_w:0
 msgid "Switch"
 msgstr "Выключатели"
 
@@ -565,10 +832,10 @@ msgid "Template"
 msgstr "Шаблон"
 
 #. module: sale_advanced_products
-#: code:addons\sale_advanced_products\sale_advanced_products.py:125
+#: code:addons/sale_advanced_products/sale_advanced_products.py:133
 #, python-format
 msgid "To delete advanced order, you must delete sale order  before!"
-msgstr "Перед тем как удалить заказ, необходимо удалить заказ на продажу!"
+msgstr "Для удаления заказа вам необходимо удалить заказ на продажу!"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,total_price:0
@@ -576,58 +843,73 @@ msgid "Total price"
 msgstr "Всего"
 
 #. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+msgid "Total price:"
+msgstr "Всего:"
+
+#. module: sale_advanced_products
 #: field:product.template,furn_towel:0
+#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
+#: field:sale.advanced.products.settings,furn_acc_towel_w:0
 msgid "Towel holder"
 msgstr "Полотенцедержатель"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_towel1_qty:0
-msgid "Towel holder 1 Qty"
-msgstr "Полотенцедержатель 1 кол-во"
+#: field:sale.advanced.products,acc_towel_qty:0
+msgid "Towel holder Qty"
+msgstr "Кол-во полотенцедержателей"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_towel1_type:0
-msgid "Towel holder 1 Type"
-msgstr "Полотенцедержатель 1 тип"
+#: field:sale.advanced.products,acc_towel_type:0
+msgid "Towel holder Type"
+msgstr "Полотенцедержатель"
 
 #. module: sale_advanced_products
-#: field:sale.advanced.products,acc_towel2_qty:0
-msgid "Towel holder 2 Qty"
-msgstr "Полотенцедержатель 2 кол-во"
-
-#. module: sale_advanced_products
-#: field:sale.advanced.products,acc_towel2_type:0
-msgid "Towel holder 2 Type"
-msgstr "Полотенцедержатель 2 тип"
-
-#. module: sale_advanced_products
-#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
-msgid "Towel holder type 1"
-msgstr "Полотенцедержатель 1"
-
-#. module: sale_advanced_products
-#: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
-msgid "Towel holder type 2"
-msgstr "Полотенцедержатель 2"
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Towel-holder type:"
+msgstr "Полотенцедержатель:"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products:sale_advanced_products.sale_advanced_products_form_view
 #: field:sale.advanced.products,acc_light_type:0
 #: field:sale.advanced.products.add,type:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Type"
 msgstr "Тип"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,body_w:0
 #: field:sale.advanced.products.add,width:0
+#: field:sale.advanced.products.aldoors,aldoor_w:0
 #: field:sale.advanced.products.box,box_w:0
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
 msgid "Width"
 msgstr "Ширина"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Width:"
+msgstr "Ширина:"
 
 #. module: sale_advanced_products
 #: field:sale.advanced.products,work_price:0
 msgid "Work price"
 msgstr "Стоимость работ"
+
+#. module: sale_advanced_products
+#: field:sale.advanced.products,work_price_free:0
+msgid "Work price (without K)"
+msgstr "Work price (without K)"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Work price:"
+msgstr "Стоимость работ:"
 
 #. module: sale_advanced_products
 #: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
@@ -639,3 +921,25 @@ msgstr "Работа"
 msgid "Works coefficient"
 msgstr "Работа"
 
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "Yes"
+msgstr "Да"
+
+#. module: sale_advanced_products
+#: view:sale.advanced.products.settings:sale_advanced_products.sale_advanced_products_settings_view
+msgid "or"
+msgstr "или"
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "pcs"
+msgstr "шт."
+
+#. module: sale_advanced_products
+#: view:website:sale_advanced_products.ext_report_templ
+#: view:website:sale_advanced_products.int_report_templ
+msgid "qty:"
+msgstr "кол-во:"
