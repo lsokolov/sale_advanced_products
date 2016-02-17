@@ -19,13 +19,13 @@
 #
 ##############################################################################
 
-import logging
+# import logging
 from openerp.osv import fields
 from openerp.osv import osv
 import datetime
 from openerp.tools.translate import _
 
-_logger = logging.getLogger(__name__)
+# _logger = logging.getLogger(__name__)
 
 
 class sale_advanced_products(osv.osv):
