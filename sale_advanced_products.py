@@ -24,6 +24,8 @@ from openerp.osv import fields
 from openerp.osv import osv
 import datetime
 from openerp.tools.translate import _
+import openerp.addons.decimal_precision as dp
+
 
 # _logger = logging.getLogger(__name__)
 
@@ -104,17 +106,17 @@ class sale_advanced_products(osv.osv):
         'acc_cut': fields.boolean('Neckline'),
         'acc_hand_cut_qty': fields.integer('Neckline type handle qty', readonly=False),
 
-        'body_price': fields.float('Corps price', readonly=True),
-        'body_price_free': fields.float('Corps price (without K)', readonly=True),
-        'find_price': fields.float('Furniture price', readonly=True),
-        'find_price_free': fields.float('Furniture price (without K)', readonly=True),
-        'add_price': fields.float('Adds price', readonly=True),
-        'add_price_free': fields.float('Adds price (without K)', readonly=True),
-        'acc_price': fields.float('Accessories price', readonly=True),
-        'acc_price_free': fields.float('Accessories price (without K)', readonly=True),
-        'work_price': fields.float('Work price', readonly=True),
-        'work_price_free': fields.float('Work price (without K)', readonly=True),
-        'total_price': fields.float('Total price', readonly=True)
+        'body_price': fields.float(digits_compute= dp.get_precision('Corps price'), readonly=True),
+        'body_price_free': fields.float(digits_compute= dp.get_precision('Corps price (without K)'), readonly=True),
+        'find_price': fields.float(digits_compute= dp.get_precision('Furniture price'), readonly=True),
+        'find_price_free': fields.float(digits_compute= dp.get_precision('Furniture price (without K)'), readonly=True),
+        'add_price': fields.float(digits_compute= dp.get_precision('Adds price'), readonly=True),
+        'add_price_free': fields.float(digits_compute= dp.get_precision('Adds price (without K)'), readonly=True),
+        'acc_price': fields.float(digits_compute= dp.get_precision('Accessories price'), readonly=True),
+        'acc_price_free': fields.float(digits_compute= dp.get_precision('Accessories price (without K)'), readonly=True),
+        'work_price': fields.float(digits_compute= dp.get_precision('Work price'), readonly=True),
+        'work_price_free': fields.float(digits_compute= dp.get_precision('Work price (without K)'), readonly=True),
+        'total_price': fields.float(digits_compute= dp.get_precision('Total price'), readonly=True)
     }
 
     _defaults = {
