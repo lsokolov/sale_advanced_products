@@ -114,7 +114,7 @@
                                                     <td>
                                                         <b>Bottom:</b> <span t-field="o.body_bott.name"/>
                                                     </td>
-                                                    <td></td>
+                                                    <td/>
                                                 </tr>
                                             </table>
                                             <t t-if="o.find_hand1_type or o.find_hand2_type or o.find_loop1_type or o.find_loop2_type or o.find_fix_type or o.find_anhand_qty or o.furn_box or o.furn_aldoors">
